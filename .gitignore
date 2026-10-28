@@ -1,5 +1,43 @@
-.env
-__pycache__/
-*.pyc
+# Entorno virtual
 .venv/
 venv/
+env/
+ENV/
+
+# Secretos y configuración local
+.env
+.env.local
+.env.*.local
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+.eggs/
+pip-wheel-metadata/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Flask
+instance/
+*.sqlite
+*.db
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+
+# Editores / IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
