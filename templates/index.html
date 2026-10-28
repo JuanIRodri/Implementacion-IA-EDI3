@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GameWiki IA</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <header class="cabecera">
+    <div class="marca">
+      <span class="marca-icono">GW</span>
+      <div>
+        <h1>GameWiki IA</h1>
+        <p>Wiki de videojuegos con asistente inteligente</p>
+      </div>
+    </div>
+  </header>
+
+  <main class="contenedor">
+    <section class="wiki">
+      <h2>Artículos de la wiki</h2>
+      <p class="intro">
+        Estos son los juegos que conoce el asistente. Preguntale sobre cualquiera de ellos
+        en el chat.
+      </p>
+
+      <div class="juegos">
+        {% for juego in juegos %}
+        <article class="juego">
+          <div class="juego-cabecera">
+            <h3>{{ juego.titulo }}</h3>
+            <span class="anio">{{ juego.anio }}</span>
+          </div>
+          <p class="genero">{{ juego.genero }} · {{ juego.desarrollador }}</p>
+          <p class="descripcion">{{ juego.descripcion }}</p>
+          <p class="plataformas">{{ juego.plataformas | join(' · ') }}</p>
+          <div class="curiosidad">
+            <strong>Dato curioso:</strong> {{ juego.datos_curiosos }}
+          </div>
+        </article>
+        {% endfor %}
+      </div>
+    </section>
+
+    <aside class="panel-chat">
+      <div class="chat-cabecera">
+        <h2>Asistente</h2>
+        <button id="reiniciar" type="button">Reiniciar</button>
+      </div>
+
+      <div id="mensajes" class="mensajes">
+        <div class="mensaje bot">
+          Hola. Soy GameWiki IA. Preguntame por los juegos de la wiki: género,
+          año, curiosidades o de qué trata cada uno.
+        </div>
+      </div>
+
+      <form id="form-chat" class="form-chat">
+        <input
+          id="entrada"
+          type="text"
+          placeholder="Ej: ¿De qué trata Hollow Knight?"
+          autocomplete="off"
+          required
+        >
+        <button id="enviar" type="submit">Enviar</button>
+      </form>
+    </aside>
+  </main>
+
+  <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>
