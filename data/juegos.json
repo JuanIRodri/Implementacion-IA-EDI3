@@ -5,7 +5,11 @@
     "genero": "Aventura / Acción",
     "anio": 1998,
     "desarrollador": "Nintendo",
-    "plataformas": ["Nintendo 64", "GameCube", "Nintendo 3DS"],
+    "plataformas": [
+      "Nintendo 64",
+      "GameCube",
+      "Nintendo 3DS"
+    ],
     "descripcion": "Link viaja en el tiempo para detener a Ganondorf y salvar Hyrule. Considerado uno de los juegos más influyentes de la historia, popularizó el bloqueo automático de cámara (Z-targeting) y los templos tridimensionales. Introdujo la ocarina con la que el jugador aprende canciones que alteran el mundo.",
     "datos_curiosos": "Fue el primer juego en recibir una puntuación perfecta de 40/40 en la revista japonesa Famitsu. Su versión original vendió más de 7 millones de copias."
   },
@@ -15,7 +19,10 @@
     "genero": "Plataformas 3D",
     "anio": 1996,
     "desarrollador": "Nintendo",
-    "plataformas": ["Nintendo 64", "Nintendo DS"],
+    "plataformas": [
+      "Nintendo 64",
+      "Nintendo DS"
+    ],
     "descripcion": "Mario explora el castillo de Peach y distintos mundos para rescatar estrellas y derrotar a Bowser. Fue el juego de lanzamiento de la Nintendo 64 y estableció las bases del movimiento en tres dimensiones con cámara controlable.",
     "datos_curiosos": "Originalmente se pensó como un juego de dos jugadores con pantalla dividida, idea que se descartó. Es el primer juego de Mario con voces completas."
   },
@@ -25,7 +32,11 @@
     "genero": "Sandbox / Supervivencia",
     "anio": 2011,
     "desarrollador": "Mojang Studios",
-    "plataformas": ["PC", "Consolas", "Móviles"],
+    "plataformas": [
+      "PC",
+      "Consolas",
+      "Móviles"
+    ],
     "descripcion": "Un mundo de bloques generado proceduralmente donde el jugador puede construir, explorar y sobrevivir. Combina modos creativo y supervivencia, con crafteo, minería, aldeanos y dimensiones como el Nether y el End.",
     "datos_curiosos": "Es el videojuego más vendido de la historia, con más de 300 millones de copias. Su creador original, Markus 'Notch' Persson, lo publicó en etapa alpha en 2009."
   },
@@ -35,7 +46,12 @@
     "genero": "RPG de acción",
     "anio": 2015,
     "desarrollador": "CD Projekt Red",
-    "plataformas": ["PC", "PlayStation", "Xbox", "Nintendo Switch"],
+    "plataformas": [
+      "PC",
+      "PlayStation",
+      "Xbox",
+      "Nintendo Switch"
+    ],
     "descripcion": "Geralt de Rivia, un cazador de monstruos, busca a Ciri mientras el mundo se prepara para una guerra. Destaca por sus misiones secundarias elaboradas, decisiones con consecuencias y sus expansiones Hearts of Stone y Blood and Wine.",
     "datos_curiosos": "Ganó el premio al Juego del Año en 2015 y es famoso por la calidad de sus expansiones, que algunos consideran mejores que el juego base."
   },
@@ -45,7 +61,11 @@
     "genero": "RPG de acción / Soulslike",
     "anio": 2011,
     "desarrollador": "FromSoftware",
-    "plataformas": ["PC", "PlayStation", "Xbox"],
+    "plataformas": [
+      "PC",
+      "PlayStation",
+      "Xbox"
+    ],
     "descripcion": "Un RPG de acción oscuro y exigente ambientado en el reino de Lordran. El jugador enfrenta enemigos poderosos, recupera almas y aprende de la muerte. Su diseño de niveles interconectados y su dificultad marcaron un género.",
     "datos_curiosos": "Popularizó el término 'soulslike'. Su famoso mensaje 'Prepare to Die' se volvió parte de la cultura del juego."
   },
@@ -55,7 +75,11 @@
     "genero": "Acción / Mundo abierto",
     "anio": 2013,
     "desarrollador": "Rockstar North",
-    "plataformas": ["PC", "PlayStation", "Xbox"],
+    "plataformas": [
+      "PC",
+      "PlayStation",
+      "Xbox"
+    ],
     "descripcion": "Tres protagonistas (Michael, Franklin y Trevor) llevan a cabo atracos en la ciudad de Los Santos. Combina una campaña narrativa con el modo online GTA Online, que recibe actualizaciones constantes.",
     "datos_curiosos": "Es uno de los productos de entretenimiento más rentables de la historia, con más de 200 millones de copias vendidas entre todas sus versiones."
   },
@@ -65,7 +89,12 @@
     "genero": "Metroidvania",
     "anio": 2017,
     "desarrollador": "Team Cherry",
-    "plataformas": ["PC", "Nintendo Switch", "PlayStation", "Xbox"],
+    "plataformas": [
+      "PC",
+      "Nintendo Switch",
+      "PlayStation",
+      "Xbox"
+    ],
     "descripcion": "Un caballero insecto explora el reino subterráneo de Hallownest. Destaca por su mapa interconectado, su combate preciso, su atmósfera melancólica y sus jefes desafiantes. Fue desarrollado por un equipo muy pequeño.",
     "datos_curiosos": "Comenzó como un proyecto de Game Jam y fue financiado con Kickstarter. Sus expansiones gratuitas añadieron jefes y zonas nuevas."
   },
@@ -75,8 +104,86 @@
     "genero": "Party / Deducción social",
     "anio": 2018,
     "desarrollador": "InnerSloth",
-    "plataformas": ["PC", "Móviles", "Consolas"],
+    "plataformas": [
+      "PC",
+      "Móviles",
+      "Consolas"
+    ],
     "descripcion": "Tripulantes deben completar tareas en una nave mientras uno o más impostores eliminan jugadores y sabotean el sistema. La comunicación y la votación son claves para descubrir al impostor.",
     "datos_curiosos": "Se volvió un fenómeno mundial en 2020, dos años después de su lanzamiento, gracias a streamers y redes sociales."
+  },
+  {
+    "id": "arena-break-out-infinite",
+    "titulo": "Arena Break Out Infinite",
+    "genero": "Battle Royale / Extracción",
+    "anio": 2025,
+    "desarrollador": "Beacon Studios",
+    "plataformas": [
+      "PC"
+    ],
+    "descripcion": "Battle royale de extracción en tiempo real. Los jugadores entran a mapas hostiles, buscan loot, completan objetivos y escapan antes de que los enemigos los encuentren.",
+    "datos_curiosos": "Es la secuela de Arena Breakout, combinando extracción y battle royale."
+  },
+  {
+    "id": "league-of-legends",
+    "titulo": "League of Legends",
+    "genero": "MOBA",
+    "anio": 2009,
+    "desarrollador": "Riot Games",
+    "plataformas": [
+      "PC"
+    ],
+    "descripcion": "MOBA en el que dos equipos de cinco jugadores compiten por destruir la base enemiga a través de torres, inhibitorios y el Núcleo.",
+    "datos_curiosos": "Es uno de los juegos free-to-play más jugados del mundo."
+  },
+  {
+    "id": "ark",
+    "titulo": "ARK: Survival Evolved",
+    "genero": "Supervivencia",
+    "anio": 2017,
+    "desarrollador": "Studio Wildcard",
+    "plataformas": [
+      "PC",
+      "PlayStation",
+      "Xbox"
+    ],
+    "descripcion": "Los jugadores sobreviven en un mundo lleno de dinosaurios, cazando, construyendo bases y domesticando criaturas.",
+    "datos_curiosos": "Combina supervivencia con dinosaurios de acción."
+  },
+  {
+    "id": "arc",
+    "titulo": "ARC Riders",
+    "genero": "Shooter",
+    "anio": 2020,
+    "desarrollador": "Studio Raider",
+    "plataformas": [
+      "PC"
+    ],
+    "descripcion": "Shooter en tiempo real con combate frenético y partidas multijugador.",
+    "datos_curiosos": "Pendiente de datos curiosos."
+  },
+  {
+    "id": "world-of-warcraft",
+    "titulo": "World of Warcraft",
+    "genero": "MMO",
+    "anio": 2004,
+    "desarrollador": "Blizzard Entertainment",
+    "plataformas": [
+      "PC"
+    ],
+    "descripcion": "MMO en el que millones de jugadores crean personajes y exploran el mundo de Azeroth, completando misiones, mazmorras y progresando en niveles.",
+    "datos_curiosos": "Es uno de los MMO más influyentes de la historia."
+  },
+  {
+    "id": "escape-from-tarkov",
+    "titulo": "Escape from Tarkov",
+    "genero": "Shooter de extracción",
+    "anio": 2018,
+    "desarrollador": "Battlestate Games",
+    "plataformas": [
+      "PC"
+    ],
+    "descripcion": "Shooter de extracción en tiempo real: los jugadores se infiltran en mapas hostiles, saquean loot y deben escapar con su botín antes de que los enemigos los detecten.",
+    "datos_curiosos": "Conocido por su realismo y por ser muy exigente en su dificultad."
   }
 ]

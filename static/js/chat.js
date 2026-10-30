@@ -37,11 +37,24 @@ async function enviarPregunta(texto) {
     const datos = await respuesta.json();
 
     if (!respuesta.ok) {
-      throw new Error(datos.error || "No se pudo obtener una respuesta.");
+      let textoError = "No se pudo obtener una respuesta de la IA.";
+      if (respuesta.status === 503) {
+        textoError = "La IA está con alta demanda en este momento. Probá de nuevo en unos minutos.";
+      } else if (respuesta.status === 429) {
+        textoError = "Límite de uso de la IA alcanzado. Probá más tarde.";
+      } else {
+        textoError = datos.error || textoError;
+      }
+      throw new Error(textoError);
     }
 
     pendiente.remove();
     agregarMensaje("bot", datos.respuesta);
+
+    const usoDiv = document.getElementById("uso-api");
+    if (usoDiv) {
+      usoDiv.textContent = "Tokens usados: " + (datos.usage && datos.usage.total_tokens ? datos.usage.total_tokens : "–") + " · prompt: " + (datos.usage && datos.usage.prompt_tokens ? datos.usage.prompt_tokens : "–") + " · respuesta: " + (datos.usage && datos.usage.completion_tokens ? datos.usage.completion_tokens : "–");
+    }
 
     historial.push({ role: "user", content: texto });
     historial.push({ role: "assistant", content: datos.respuesta });
@@ -55,17 +68,21 @@ async function enviarPregunta(texto) {
   }
 }
 
-form.addEventListener("submit", (evento) => {
-  evento.preventDefault();
-  const texto = entrada.value.trim();
-  if (!texto || cargando) return;
-  entrada.value = "";
-  enviarPregunta(texto);
-});
+function initChat() {
+  form.addEventListener("submit", (evento) => {
+    evento.preventDefault();
+    const texto = entrada.value.trim();
+    if (!texto || cargando) return;
+    entrada.value = "";
+    enviarPregunta(texto);
+  });
 
-reiniciar.addEventListener("click", () => {
-  historial = [];
-  mensajes.innerHTML = "";
-  agregarMensaje("bot", saludo);
-  entrada.focus();
-});
+  reiniciar.addEventListener("click", () => {
+    historial = [];
+    mensajes.innerHTML = "";
+    agregarMensaje("bot", saludo);
+    entrada.focus();
+  });
+}
+
+export { initChat };

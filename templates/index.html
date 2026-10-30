@@ -25,22 +25,7 @@
         en el chat.
       </p>
 
-      <div class="juegos">
-        {% for juego in juegos %}
-        <article class="juego">
-          <div class="juego-cabecera">
-            <h3>{{ juego.titulo }}</h3>
-            <span class="anio">{{ juego.anio }}</span>
-          </div>
-          <p class="genero">{{ juego.genero }} · {{ juego.desarrollador }}</p>
-          <p class="descripcion">{{ juego.descripcion }}</p>
-          <p class="plataformas">{{ juego.plataformas | join(' · ') }}</p>
-          <div class="curiosidad">
-            <strong>Dato curioso:</strong> {{ juego.datos_curiosos }}
-          </div>
-        </article>
-        {% endfor %}
-      </div>
+      <div class="juegos" id="juegos"></div>
     </section>
 
     <aside class="panel-chat">
@@ -50,10 +35,7 @@
       </div>
 
       <div id="mensajes" class="mensajes">
-        <div class="mensaje bot">
-          Hola. Soy GameWiki IA. Preguntame por los juegos de la wiki: género,
-          año, curiosidades o de qué trata cada uno.
-        </div>
+        <div class="mensaje bot">Hola. Soy GameWiki IA. Preguntame por los juegos de la wiki: género, año, curiosidades o de qué trata cada uno.</div>
       </div>
 
       <form id="form-chat" class="form-chat">
@@ -66,9 +48,16 @@
         >
         <button id="enviar" type="submit">Enviar</button>
       </form>
+
+      <div id="uso-api" class="uso-api"></div>
     </aside>
   </main>
 
-  <script src="{{ url_for('static', filename='app.js') }}"></script>
+  <script type="module">
+    import { initChat } from "/static/js/chat.js";
+    import { initJuegos } from "/static/js/juegos.js";
+    initChat();
+    initJuegos();
+  </script>
 </body>
 </html>

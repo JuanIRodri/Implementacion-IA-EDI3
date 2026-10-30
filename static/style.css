@@ -281,3 +281,31 @@ body {
     height: 70vh;
   }
 }
+
+.paginacion-juegos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding-top: 12px;
+}
+
+.paginacion-juegos button {
+  background: var(--panel-suave);
+  border: 1px solid var(--borde);
+  color: var(--texto);
+  border-radius: 8px;
+  padding: 6px 10px;
+  font-size: 0.78rem;
+  cursor: pointer;
+}
+
+.paginacion-juegos button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.pagina-info {
+  font-size: 0.78rem;
+  color: var(--texto-suave);
+}
