@@ -129,6 +129,25 @@ DECLARACION_TOOL = {
 2. Se arma `mensajes` con system + historial + user + tool response.
 3. Se llama a Groq de nuevo → respuesta final.
 
+## Paso a paso del funcionamiento
+
+### Flujo del chat
+1. Usuario escribe en el chat.
+2. Frontend envía `POST /api/chat` con mensaje e historial.
+3. Backend arma system prompt + contexto.
+4. Llama a Groq con tools.
+5. Si hay tool calls → ejecuta → vuelve a llamar → hasta respuesta final.
+6. Devuelve `{respuesta, usage}` → frontend muestra y muestra tokens.
+
+### Flujo de los juegos
+1. Usuario hace scroll → frontend llama `GET /api/juegos`.
+2. Backend pagina `data/juegos.json`.
+3. Frontend renderiza tarjetas + paginación.
+
+### Manejo de errores
+1. Backend: si error es UNAVAILABLE/503 → 503 friendly; else 502.
+2. Frontend: si 503 → friendly; si 429 → friendly; else `datos.error`.
+
 ## Estructura relevante
 - `app.py` → Flask + RAG + Groq (OpenAI SDK).
 - `data/juegos.json` → wiki (14 juegos).
