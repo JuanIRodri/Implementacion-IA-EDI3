@@ -98,7 +98,7 @@ def texto_del_juego(juego):
     return normalizar(" ".join(partes))
 
 
-def buscar_juegos(pregunta, limite=8):
+def buscar_juegos(pregunta, limite=8, min_puntaje=1):
     consulta = pregunta.lower()
     for alias, termino in ALIAS.items():
         consulta = consulta.replace(alias, termino)
@@ -124,7 +124,8 @@ def buscar_juegos(pregunta, limite=8):
         puntuados.append((puntaje, juego))
 
     puntuados.sort(key=lambda par: par[0], reverse=True)
-    return [juego for _, juego in puntuados[:limite]]
+    filtrados = [(p, j) for p, j in puntuados if p >= min_puntaje]
+    return [juego for _, juego in filtrados[:limite]]
 
 
 CONECTORES_CONTINUACION = {
@@ -171,13 +172,10 @@ def construir_contexto(juegos):
             f"Clasificación: {juego.get('clasificacion', '–')}\n"
             f"Precio: {juego.get('precio', '–')}\n"
             f"Jugadores: {juego.get('jugadores', '–')}\n"
-            f"Motor: {juego.get('motor', '–')}\n"
             f"Duración: {juego.get('duracion', '–')}\n"
             f"Puntuación: {juego.get('puntuacion', '–')}\n"
             f"Etiquetas: {', '.join(juego.get('tags', []))}\n"
-            f"Enlace: {juego.get('enlace', '–')}\n"
-            f"Descripción: {juego['descripcion']}\n"
-            f"Datos curiosos: {juego['datos_curiosos']}"
+            f"Descripción: {juego['descripcion']}"
         )
     return "\n\n".join(bloques)
 
@@ -223,7 +221,7 @@ def generar_respuesta(mensaje, historial):
     sistema = f"{INSTRUCCIONES}\n\nContexto de la wiki:\n\n{contexto}"
 
     mensajes = [{"role": "system", "content": sistema}]
-    for turno in historial[-10:]:
+    for turno in historial[-6:]:
         texto = str(turno.get("content", "")).strip()
         if not texto:
             continue
