@@ -27,6 +27,22 @@ PALABRAS_VACIAS = {
     "son", "es", "mas", "más", "pero", "sus", "muy", "the", "and",
 }
 
+ALIAS = {
+    "hk": "hollow knight",
+    "gta": "grand theft auto",
+    "lol": "league of legends",
+    "wow": "world of warcraft",
+    "mc": "minecraft",
+    "zelda": "zelda",
+    "mario": "mario",
+    "tarkov": "escape from tarkov",
+    "witcher": "witcher",
+    "dark souls": "dark souls",
+    "among us": "among us",
+    "ark": "ark",
+    "arena": "arena break out infinite",
+}
+
 INSTRUCCIONES = (
     "Sos GameWiki IA, un asistente experto en videojuegos. "
     "Respondés siempre en español, de forma clara, breve y amable. "
@@ -76,14 +92,19 @@ def texto_del_juego(juego):
         " ".join(juego.get("plataformas", [])),
         juego.get("descripcion", ""),
         juego.get("datos_curiosos", ""),
+        juego.get("clasificacion", ""),
+        " ".join(juego.get("tags", [])),
     ]
     return normalizar(" ".join(partes))
 
 
 def buscar_juegos(pregunta, limite=4):
+    consulta = pregunta.lower()
+    for alias, termino in ALIAS.items():
+        consulta = consulta.replace(alias, termino)
     palabras = {
         palabra
-        for palabra in normalizar(pregunta)
+        for palabra in normalizar(consulta)
         if len(palabra) > 2 and palabra not in PALABRAS_VACIAS
     }
 
@@ -106,6 +127,14 @@ def construir_contexto(juegos):
             f"Año: {juego['anio']}\n"
             f"Desarrollador: {juego['desarrollador']}\n"
             f"Plataformas: {', '.join(juego['plataformas'])}\n"
+            f"Clasificación: {juego.get('clasificacion', '–')}\n"
+            f"Precio: {juego.get('precio', '–')}\n"
+            f"Jugadores: {juego.get('jugadores', '–')}\n"
+            f"Motor: {juego.get('motor', '–')}\n"
+            f"Duración: {juego.get('duracion', '–')}\n"
+            f"Puntuación: {juego.get('puntuacion', '–')}\n"
+            f"Etiquetas: {', '.join(juego.get('tags', []))}\n"
+            f"Enlace: {juego.get('enlace', '–')}\n"
             f"Descripción: {juego['descripcion']}\n"
             f"Datos curiosos: {juego['datos_curiosos']}"
         )
@@ -124,6 +153,14 @@ def ejecutar_tool(nombre, argumentos):
                     "anio": juego.get("anio", ""),
                     "desarrollador": juego.get("desarrollador", ""),
                     "plataformas": juego.get("plataformas", []),
+                    "clasificacion": juego.get("clasificacion", ""),
+                    "precio": juego.get("precio", ""),
+                    "jugadores": juego.get("jugadores", ""),
+                    "motor": juego.get("motor", ""),
+                    "duracion": juego.get("duracion", ""),
+                    "puntuacion": juego.get("puntuacion", ""),
+                    "tags": juego.get("tags", []),
+                    "enlace": juego.get("enlace", ""),
                     "descripcion": juego.get("descripcion", ""),
                     "datos_curiosos": juego.get("datos_curiosos", ""),
                 }

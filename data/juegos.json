@@ -5,13 +5,17 @@
     "genero": "Aventura / Acción",
     "anio": 1998,
     "desarrollador": "Nintendo",
-    "plataformas": [
-      "Nintendo 64",
-      "GameCube",
-      "Nintendo 3DS"
-    ],
+    "plataformas": ["Nintendo 64", "GameCube", "Nintendo 3DS"],
     "descripcion": "Link viaja en el tiempo para detener a Ganondorf y salvar Hyrule. Considerado uno de los juegos más influyentes de la historia, popularizó el bloqueo automático de cámara (Z-targeting) y los templos tridimensionales. Introdujo la ocarina con la que el jugador aprende canciones que alteran el mundo.",
-    "datos_curiosos": "Fue el primer juego en recibir una puntuación perfecta de 40/40 en la revista japonesa Famitsu. Su versión original vendió más de 7 millones de copias."
+    "datos_curiosos": "Fue el primer juego en recibir una puntuación perfecta de 40/40 en la revista japonesa Famitsu. Su versión original vendió más de 7 millones de copias.",
+    "clasificacion": "PEGI 12 / E10+",
+    "precio": "Varía según reedición",
+    "jugadores": "1 jugador",
+    "motor": "Propietario Nintendo",
+    "duracion": "30-40 horas",
+    "puntuacion": 99,
+    "tags": ["aventura", "puzles", "exploración", "clásico"],
+    "enlace": "https://www.nintendo.com/zelda/"
   },
   {
     "id": "mario-64",
@@ -19,12 +23,17 @@
     "genero": "Plataformas 3D",
     "anio": 1996,
     "desarrollador": "Nintendo",
-    "plataformas": [
-      "Nintendo 64",
-      "Nintendo DS"
-    ],
+    "plataformas": ["Nintendo 64", "Nintendo DS"],
     "descripcion": "Mario explora el castillo de Peach y distintos mundos para rescatar estrellas y derrotar a Bowser. Fue el juego de lanzamiento de la Nintendo 64 y estableció las bases del movimiento en tres dimensiones con cámara controlable.",
-    "datos_curiosos": "Originalmente se pensó como un juego de dos jugadores con pantalla dividida, idea que se descartó. Es el primer juego de Mario con voces completas."
+    "datos_curiosos": "Originalmente se pensó como un juego de dos jugadores con pantalla dividida, idea que se descartó. Es el primer juego de Mario con voces completas.",
+    "clasificacion": "PEGI 3 / E",
+    "precio": "Varía según reedición",
+    "jugadores": "1 jugador",
+    "motor": "Propietario Nintendo",
+    "duracion": "15-20 horas",
+    "puntuacion": 95,
+    "tags": ["plataformas", "3D", "Nintendo", "clásico"],
+    "enlace": "https://www.nintendo.com/mario/"
   },
   {
     "id": "minecraft",
@@ -32,13 +41,17 @@
     "genero": "Sandbox / Supervivencia",
     "anio": 2011,
     "desarrollador": "Mojang Studios",
-    "plataformas": [
-      "PC",
-      "Consolas",
-      "Móviles"
-    ],
+    "plataformas": ["PC", "Consolas", "Móviles"],
     "descripcion": "Un mundo de bloques generado proceduralmente donde el jugador puede construir, explorar y sobrevivir. Combina modos creativo y supervivencia, con crafteo, minería, aldeanos y dimensiones como el Nether y el End.",
-    "datos_curiosos": "Es el videojuego más vendido de la historia, con más de 300 millones de copias. Su creador original, Markus 'Notch' Persson, lo publicó en etapa alpha en 2009."
+    "datos_curiosos": "Es el videojuego más vendido de la historia, con más de 300 millones de copias. Su creador original, Markus 'Notch' Persson, lo publicó en etapa alpha en 2009.",
+    "clasificacion": "PEGI 7 / E10+",
+    "precio": "Pago único",
+    "jugadores": "1 y multijugador",
+    "motor": "Propietario Mojang",
+    "duracion": "Indefinido",
+    "puntuacion": 93,
+    "tags": ["sandbox", "supervivencia", "construcción", "multijugador"],
+    "enlace": "https://www.minecraft.net/"
   },
   {
     "id": "witcher-3",
@@ -46,14 +59,17 @@
     "genero": "RPG de acción",
     "anio": 2015,
     "desarrollador": "CD Projekt Red",
-    "plataformas": [
-      "PC",
-      "PlayStation",
-      "Xbox",
-      "Nintendo Switch"
-    ],
+    "plataformas": ["PC", "PlayStation", "Xbox", "Nintendo Switch"],
     "descripcion": "Geralt de Rivia, un cazador de monstruos, busca a Ciri mientras el mundo se prepara para una guerra. Destaca por sus misiones secundarias elaboradas, decisiones con consecuencias y sus expansiones Hearts of Stone y Blood and Wine.",
-    "datos_curiosos": "Ganó el premio al Juego del Año en 2015 y es famoso por la calidad de sus expansiones, que algunos consideran mejores que el juego base."
+    "datos_curiosos": "Ganó el premio al Juego del Año en 2015 y es famoso por la calidad de sus expansiones, que algunos consideran mejores que el juego base.",
+    "clasificacion": "PEGI 18 / M",
+    "precio": "Pago único",
+    "jugadores": "1 jugador",
+    "motor": "REDengine 3",
+    "duracion": "100-150 horas",
+    "puntuacion": 93,
+    "tags": ["RPG", "mundo abierto", "fantasía", "monstruos"],
+    "enlace": "https://www.thewitcher.com/"
   },
   {
     "id": "dark-souls",
@@ -61,13 +77,17 @@
     "genero": "RPG de acción / Soulslike",
     "anio": 2011,
     "desarrollador": "FromSoftware",
-    "plataformas": [
-      "PC",
-      "PlayStation",
-      "Xbox"
-    ],
+    "plataformas": ["PC", "PlayStation", "Xbox"],
     "descripcion": "Un RPG de acción oscuro y exigente ambientado en el reino de Lordran. El jugador enfrenta enemigos poderosos, recupera almas y aprende de la muerte. Su diseño de niveles interconectados y su dificultad marcaron un género.",
-    "datos_curiosos": "Popularizó el término 'soulslike'. Su famoso mensaje 'Prepare to Die' se volvió parte de la cultura del juego."
+    "datos_curiosos": "Popularizó el término 'soulslike'. Su famoso mensaje 'Prepare to Die' se volvió parte de la cultura del juego.",
+    "clasificacion": "PEGI 16 / M",
+    "precio": "Pago único",
+    "jugadores": "1 y multijugador opcional",
+    "motor": "Propietario FromSoftware",
+    "duracion": "40-60 horas",
+    "puntuacion": 89,
+    "tags": ["soulslike", "difícil", "fantasía oscura", "jefes"],
+    "enlace": "https://www.bandainamcoent.com/darksouls"
   },
   {
     "id": "gta-v",
@@ -75,13 +95,17 @@
     "genero": "Acción / Mundo abierto",
     "anio": 2013,
     "desarrollador": "Rockstar North",
-    "plataformas": [
-      "PC",
-      "PlayStation",
-      "Xbox"
-    ],
+    "plataformas": ["PC", "PlayStation", "Xbox"],
     "descripcion": "Tres protagonistas (Michael, Franklin y Trevor) llevan a cabo atracos en la ciudad de Los Santos. Combina una campaña narrativa con el modo online GTA Online, que recibe actualizaciones constantes.",
-    "datos_curiosos": "Es uno de los productos de entretenimiento más rentables de la historia, con más de 200 millones de copias vendidas entre todas sus versiones."
+    "datos_curiosos": "Es uno de los productos de entretenimiento más rentables de la historia, con más de 200 millones de copias vendidas entre todas sus versiones.",
+    "clasificacion": "PEGI 18 / M",
+    "precio": "Pago único",
+    "jugadores": "1 y multijugador",
+    "motor": "RAGE",
+    "duracion": "30-50 horas (historia)",
+    "puntuacion": 97,
+    "tags": ["mundo abierto", "atracos", "crimen", "multijugador"],
+    "enlace": "https://www.rockstargames.com/V/"
   },
   {
     "id": "hollow-knight",
@@ -89,14 +113,17 @@
     "genero": "Metroidvania",
     "anio": 2017,
     "desarrollador": "Team Cherry",
-    "plataformas": [
-      "PC",
-      "Nintendo Switch",
-      "PlayStation",
-      "Xbox"
-    ],
+    "plataformas": ["PC", "Nintendo Switch", "PlayStation", "Xbox"],
     "descripcion": "Un caballero insecto explora el reino subterráneo de Hallownest. Destaca por su mapa interconectado, su combate preciso, su atmósfera melancólica y sus jefes desafiantes. Fue desarrollado por un equipo muy pequeño.",
-    "datos_curiosos": "Comenzó como un proyecto de Game Jam y fue financiado con Kickstarter. Sus expansiones gratuitas añadieron jefes y zonas nuevas."
+    "datos_curiosos": "Comenzó como un proyecto de Game Jam y fue financiado con Kickstarter. Sus expansiones gratuitas añadieron jefes y zonas nuevas.",
+    "clasificacion": "PEGI 7 / E",
+    "precio": "Pago único",
+    "jugadores": "1 jugador",
+    "motor": "Unity",
+    "duracion": "30-50 horas",
+    "puntuacion": 90,
+    "tags": ["metroidvania", "2D", "jefes", "exploración"],
+    "enlace": "https://www.hollowknight.com/"
   },
   {
     "id": "among-us",
@@ -104,13 +131,17 @@
     "genero": "Party / Deducción social",
     "anio": 2018,
     "desarrollador": "InnerSloth",
-    "plataformas": [
-      "PC",
-      "Móviles",
-      "Consolas"
-    ],
+    "plataformas": ["PC", "Móviles", "Consolas"],
     "descripcion": "Tripulantes deben completar tareas en una nave mientras uno o más impostores eliminan jugadores y sabotean el sistema. La comunicación y la votación son claves para descubrir al impostor.",
-    "datos_curiosos": "Se volvió un fenómeno mundial en 2020, dos años después de su lanzamiento, gracias a streamers y redes sociales."
+    "datos_curiosos": "Se volvió un fenómeno mundial en 2020, dos años después de su lanzamiento, gracias a streamers y redes sociales.",
+    "clasificacion": "PEGI 7 / E",
+    "precio": "Gratis / Pago según plataforma",
+    "jugadores": "4-10 jugadores",
+    "motor": "Unity",
+    "duracion": "Partidas de 5-15 minutos",
+    "puntuacion": 80,
+    "tags": ["multijugador", "deducción", "fiesta", "impostor"],
+    "enlace": "https://www.innersloth.com/"
   },
   {
     "id": "arena-break-out-infinite",
@@ -118,11 +149,17 @@
     "genero": "Battle Royale / Extracción",
     "anio": 2025,
     "desarrollador": "Beacon Studios",
-    "plataformas": [
-      "PC"
-    ],
+    "plataformas": ["PC"],
     "descripcion": "Battle royale de extracción en tiempo real. Los jugadores entran a mapas hostiles, buscan loot, completan objetivos y escapan antes de que los enemigos los encuentren.",
-    "datos_curiosos": "Es la secuela de Arena Breakout, combinando extracción y battle royale."
+    "datos_curiosos": "Es la secuela de Arena Breakout, combinando extracción y battle royale.",
+    "clasificacion": "PEGI 16 / T",
+    "precio": "Free-to-play",
+    "jugadores": "Multijugador",
+    "motor": "Unreal Engine 4",
+    "duracion": "Partidas de 15-30 minutos",
+    "puntuacion": 75,
+    "tags": ["extracción", "battle royale", "FPS", "gratuito"],
+    "enlace": "https://www.arénabreakout.com/"
   },
   {
     "id": "league-of-legends",
@@ -130,11 +167,17 @@
     "genero": "MOBA",
     "anio": 2009,
     "desarrollador": "Riot Games",
-    "plataformas": [
-      "PC"
-    ],
+    "plataformas": ["PC"],
     "descripcion": "MOBA en el que dos equipos de cinco jugadores compiten por destruir la base enemiga a través de torres, inhibitorios y el Núcleo.",
-    "datos_curiosos": "Es uno de los juegos free-to-play más jugados del mundo."
+    "datos_curiosos": "Es uno de los juegos free-to-play más jugados del mundo.",
+    "clasificacion": "PEGI 12 / T",
+    "precio": "Free-to-play",
+    "jugadores": "5v5",
+    "motor": "Propietario Riot",
+    "duracion": "Partidas de 20-40 minutos",
+    "puntuacion": 85,
+    "tags": ["MOBA", "gratuito", "competitivo", "equipos"],
+    "enlace": "https://www.leagueoflegends.com/"
   },
   {
     "id": "ark",
@@ -142,13 +185,17 @@
     "genero": "Supervivencia",
     "anio": 2017,
     "desarrollador": "Studio Wildcard",
-    "plataformas": [
-      "PC",
-      "PlayStation",
-      "Xbox"
-    ],
+    "plataformas": ["PC", "PlayStation", "Xbox"],
     "descripcion": "Los jugadores sobreviven en un mundo lleno de dinosaurios, cazando, construyendo bases y domesticando criaturas.",
-    "datos_curiosos": "Combina supervivencia con dinosaurios de acción."
+    "datos_curiosos": "Combina supervivencia con dinosaurios de acción.",
+    "clasificacion": "PEGI 16 / M",
+    "precio": "Pago único",
+    "jugadores": "1 y multijugador",
+    "motor": "Unreal Engine 4",
+    "duracion": "50-100 horas",
+    "puntuacion": 70,
+    "tags": ["supervivencia", "dinosaurios", "construcción", "multijugador"],
+    "enlace": "https://survivetheark.com/"
   },
   {
     "id": "arc",
@@ -156,11 +203,17 @@
     "genero": "Shooter",
     "anio": 2020,
     "desarrollador": "Studio Raider",
-    "plataformas": [
-      "PC"
-    ],
+    "plataformas": ["PC"],
     "descripcion": "Shooter en tiempo real con combate frenético y partidas multijugador.",
-    "datos_curiosos": "Pendiente de datos curiosos."
+    "datos_curiosos": "Pendiente de datos curiosos.",
+    "clasificacion": "PEGI 12 / T",
+    "precio": "Pago único",
+    "jugadores": "Multijugador",
+    "motor": "Unity",
+    "duracion": "Partidas de 10-20 minutos",
+    "puntuacion": 65,
+    "tags": ["shooter", "multijugador", "acción"],
+    "enlace": "https://www.studioraider.com/"
   },
   {
     "id": "world-of-warcraft",
@@ -168,11 +221,17 @@
     "genero": "MMO",
     "anio": 2004,
     "desarrollador": "Blizzard Entertainment",
-    "plataformas": [
-      "PC"
-    ],
+    "plataformas": ["PC"],
     "descripcion": "MMO en el que millones de jugadores crean personajes y exploran el mundo de Azeroth, completando misiones, mazmorras y progresando en niveles.",
-    "datos_curiosos": "Es uno de los MMO más influyentes de la historia."
+    "datos_curiosos": "Es uno de los MMO más influyentes de la historia.",
+    "clasificacion": "PEGI 12 / T",
+    "precio": "Suscripción",
+    "jugadores": "Multijugador masivo",
+    "motor": "Propietario Blizzard",
+    "duracion": "Indefinido",
+    "puntuacion": 91,
+    "tags": ["MMO", "fantasía", "suscripción", "multijugador"],
+    "enlace": "https://worldofwarcraft.com/"
   },
   {
     "id": "escape-from-tarkov",
@@ -180,10 +239,16 @@
     "genero": "Shooter de extracción",
     "anio": 2018,
     "desarrollador": "Battlestate Games",
-    "plataformas": [
-      "PC"
-    ],
+    "plataformas": ["PC"],
     "descripcion": "Shooter de extracción en tiempo real: los jugadores se infiltran en mapas hostiles, saquean loot y deben escapar con su botín antes de que los enemigos los detecten.",
-    "datos_curiosos": "Conocido por su realismo y por ser muy exigente en su dificultad."
+    "datos_curiosos": "Conocido por su realismo y por ser muy exigente en su dificultad.",
+    "clasificacion": "PEGI 18 / M",
+    "precio": "Pago único",
+    "jugadores": "Multijugador",
+    "motor": "Unity",
+    "duracion": "Partidas de 20-40 minutos",
+    "puntuacion": 82,
+    "tags": ["extracción", "táctico", "realista", "FPS"],
+    "enlace": "https://escapefromtarkov.com/"
   }
 ]

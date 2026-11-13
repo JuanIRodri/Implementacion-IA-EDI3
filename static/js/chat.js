@@ -53,7 +53,8 @@ async function enviarPregunta(texto) {
 
     const usoDiv = document.getElementById("uso-api");
     if (usoDiv) {
-      usoDiv.textContent = "Tokens usados: " + (datos.usage && datos.usage.total_tokens ? datos.usage.total_tokens : "–") + " · prompt: " + (datos.usage && datos.usage.prompt_tokens ? datos.usage.prompt_tokens : "–") + " · respuesta: " + (datos.usage && datos.usage.completion_tokens ? datos.usage.completion_tokens : "–");
+      const u = datos.usage || {};
+      usoDiv.textContent = "Tokens: " + (u.total_tokens !== undefined ? u.total_tokens : "–") + " (pregunta: " + (u.prompt_tokens !== undefined ? u.prompt_tokens : "–") + ", respuesta: " + (u.completion_tokens !== undefined ? u.completion_tokens : "–") + ")";
     }
 
     historial.push({ role: "user", content: texto });

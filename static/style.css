@@ -309,3 +309,12 @@ body {
   font-size: 0.78rem;
   color: var(--texto-suave);
 }
+
+#uso-api {
+  margin-top: 10px;
+  padding-top: 8px;
+  border-top: 1px solid var(--borde);
+  font-size: 0.75rem;
+  color: var(--texto-suave);
+  text-align: right;
+}
