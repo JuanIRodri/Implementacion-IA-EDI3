@@ -118,6 +118,38 @@ def buscar_juegos(pregunta, limite=4):
     return [juego for _, juego in puntuados[:limite]]
 
 
+CONECTORES_CONTINUACION = {
+    "y", "tambien", "también", "ese", "esa", "aquel", "aquella",
+    "este", "esta", "estos", "estas", "lo mismo", "igualmente",
+    "de ese", "de esa", "de aquel", "de aquella", "de este", "de esta",
+}
+
+
+def historial_usuarios(historial):
+    return [
+        str(turno.get("content", "")).strip()
+        for turno in historial
+        if turno.get("role") == "user" and str(turno.get("content", "")).strip()
+    ]
+
+
+def expandir_consulta(mensaje, historial):
+    palabras = normalizar(mensaje)
+    es_continuacion = (
+        len(palabras) <= 3
+        or (palabras and palabras[0] in CONECTORES_CONTINUACION)
+        or any(
+            c in mensaje.lower()
+            for c in ["y ", "también ", "tambien ", "ese ", "esa ", "aquel ", "este ", "esta "]
+        )
+    )
+    if es_continuacion and historial:
+        previos = historial_usuarios(historial)
+        if previos:
+            return f"{previos[-1]} {mensaje}"
+    return mensaje
+
+
 def construir_contexto(juegos):
     bloques = []
     for juego in juegos:
@@ -177,7 +209,8 @@ def generar_respuesta(mensaje, historial):
             "y pegá tu clave de Groq."
         )
 
-    contexto = construir_contexto(buscar_juegos(mensaje))
+    consulta = expandir_consulta(mensaje, historial)
+    contexto = construir_contexto(buscar_juegos(consulta))
     sistema = f"{INSTRUCCIONES}\n\nContexto de la wiki:\n\n{contexto}"
 
     mensajes = [{"role": "system", "content": sistema}]
@@ -228,6 +261,10 @@ def generar_respuesta(mensaje, historial):
         for tc in tool_calls:
             if tc.function.name == "buscar_juegos":
                 argumentos = json.loads(tc.function.arguments or "{}")
+                consulta_tool = expandir_consulta(
+                    str(argumentos.get("consulta", "")), historial + [{"role": "user", "content": mensaje}]
+                )
+                argumentos["consulta"] = consulta_tool
                 resultado = ejecutar_tool("buscar_juegos", argumentos)
                 mensajes.append(
                     {
