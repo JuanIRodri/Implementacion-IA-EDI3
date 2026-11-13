@@ -98,7 +98,7 @@ def texto_del_juego(juego):
     return normalizar(" ".join(partes))
 
 
-def buscar_juegos(pregunta, limite=4):
+def buscar_juegos(pregunta, limite=8):
     consulta = pregunta.lower()
     for alias, termino in ALIAS.items():
         consulta = consulta.replace(alias, termino)
@@ -108,10 +108,19 @@ def buscar_juegos(pregunta, limite=4):
         if len(palabra) > 2 and palabra not in PALABRAS_VACIAS
     }
 
+    generos_disponibles = [
+        set(normalizar(juego.get("genero", ""))) for juego in JUEGOS
+    ]
+    coincide_genero = any(
+        palabras & genero for genero in generos_disponibles if genero
+    )
+
     puntuados = []
-    for juego in JUEGOS:
+    for juego, juego_generos in zip(JUEGOS, generos_disponibles):
         contenido = set(texto_del_juego(juego))
         puntaje = len(palabras & contenido)
+        if coincide_genero and palabras & juego_generos:
+            puntaje += 3
         puntuados.append((puntaje, juego))
 
     puntuados.sort(key=lambda par: par[0], reverse=True)
