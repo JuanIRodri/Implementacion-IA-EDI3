@@ -74,7 +74,7 @@ DECLARACION_TOOL = {
     },
 }
 
-MAX_ITERACIONES_TOOL = 3
+MAX_ITERACIONES_TOOL = 10
 
 
 def normalizar(texto):
@@ -199,7 +199,13 @@ def generar_respuesta(mensaje, historial):
 
     respuesta = cliente.chat.completions.create(**crear_config())
 
-    while respuesta.choices and respuesta.choices[0].message.tool_calls:
+    iteraciones = 0
+    while (
+        respuesta.choices
+        and respuesta.choices[0].message.tool_calls
+        and iteraciones < MAX_ITERACIONES_TOOL
+    ):
+        iteraciones += 1
         mensaje_ia = respuesta.choices[0].message
         tool_calls = mensaje_ia.tool_calls or []
         mensajes.append(
