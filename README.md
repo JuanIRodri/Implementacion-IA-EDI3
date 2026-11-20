@@ -20,6 +20,7 @@ y se la pasamos como contexto. Así responde con base en nuestros datos.
 - **Groq** - Proveedor de IA (OpenAI SDK, modelo `openai/gpt-oss-20b`)
 - **OpenAI SDK** - Cliente para conectarse a Groq
 - **python-dotenv** - Para guardar la API key de forma segura
+- **Sentence Transformers** - Para generar embeddings y hacer búsqueda semántica (`all-MiniLM-L6-v2`)
 
 ## Cómo correrlo
 
@@ -51,6 +52,14 @@ Abrir [http://localhost:5000](http://localhost:5000).
 - El asistente usa **function calling** con la tool `buscar_juegos` para buscar los artículos más relevantes al mensaje.
 - Se arma contexto con los datos encontrados.
 - El modelo genera una respuesta basándose en ese contexto.
+- La búsqueda de artículos combina **coincidencia de palabras** con **embeddings + similitud coseno** (búsqueda semántica).
+
+## Búsqueda semántica (embeddings)
+
+- Los artículos de `data/juegos.json` se convierten en embeddings con `sentence-transformers` (modelo `all-MiniLM-L6-v2`).
+- La query se compara contra los artículos usando **similitud coseno**.
+- Los embeddings se guardan en caché (`data/embeddings_cache.pkl`) para no regenerarlos en cada arranque.
+- Si `sentence-transformers` no está instalado, la app usa la búsqueda por coincidencia de palabras.
 
 ## Implementación
 
@@ -115,7 +124,6 @@ Usamos OpenAI SDK con Groq:
 
 ## Mejoras posibles
 
-- Usar embeddings (sentence-transformers) para búsqueda semántica
 - Añadir más juegos al JSON
 - Guardar historial en base de datos
 - Agregar streaming de respuestas

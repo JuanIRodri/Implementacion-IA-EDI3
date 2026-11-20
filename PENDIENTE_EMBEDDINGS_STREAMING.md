@@ -4,6 +4,7 @@
 - Alias/abreviaturas de juegos (hk, gta, lol, wow, mc, etc.) en `app.py` (`ALIAS`)
 - Campos extra en `data/juegos.json`: clasificacion, precio, jugadores, motor, duracion, puntuacion, tags, enlace
 - Uso de tokens en una línea al fondo del chat (`static/js/chat.js`)
+- Búsqueda semántica con embeddings (sentence-transformers, `all-MiniLM-L6-v2`) + similitud coseno (con fallback por palabras)
 
 ## Qué falta instalar
 ```bash
@@ -11,11 +12,7 @@
 ```
 
 ## Qué falta implementar
-1. **Búsqueda semántica (embeddings)**
-   - Generar embeddings de los artículos de `data/juegos.json`
-   - Usar `sentence-transformers` (modelo ligero: `all-MiniLM-L6-v2`, ~80-100 MB RAM)
-   - Reemplazar/ complementar la búsqueda por coincidencia de palabras con búsqueda por similitud coseno
-   - Guardar embeddings en caché para no regenerar en cada inicio
+1. ~~Búsqueda semántica (embeddings)~~ (hecha: ver arriba)
 
 2. **Streaming de respuestas (Server-Sent Events)**
    - Endpoint `/api/chat/stream` que envíe tokens progresivamente al frontend

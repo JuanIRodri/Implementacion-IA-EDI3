@@ -41,3 +41,6 @@ Thumbs.db
 *.swp
 *.swo
 *~
+
+# Cache de embeddings
+data/embeddings_cache.pkl

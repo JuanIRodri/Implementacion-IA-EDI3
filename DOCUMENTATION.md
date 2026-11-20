@@ -22,6 +22,14 @@ Abrir http://localhost:5000
 - `POST /api/chat` → body `{ "mensaje": "...", "historial": [...] }`. Devuelve `{ "respuesta": "...", "usage": {...} }`.
 - `GET /api/juegos?page=&por_pagina=` → lista paginada de juegos.
 
+## Búsqueda semántica (embeddings)
+
+- Se usa `sentence-transformers` con el modelo `all-MiniLM-L6-v2` para generar un embedding por artículo de `data/juegos.json`.
+- `_similitudes_consulta()` calcula la similitud coseno entre la query (normalizada) y los embeddings de los artículos.
+- `_cargar_o_generar_vectores()` genera los embeddings (texto plano de cada juego con `texto_del_juego`) y guarda el cache en `data/embeddings_cache.pkl`.
+- `buscar_juegos()` combina el puntaje por coincidencia de palabras (con bonus de género) y la similitud; si la similitud supera `UMBRAL_SIMILARIDAD` el artículo entra como candidato.
+- Si `sentence-transformers` no está disponible, `_similitudes_consulta()` devuelve `None` y se usa la búsqueda por palabras.
+
 ## Implementación de la IA (Groq + Function Calling)
 
 ### 1. Cliente
